@@ -1,0 +1,42 @@
+{
+    "name": "Radiant Space Extensions",
+    "description": "Official extension repository for Radiant Space webtoon reader",
+    "extensions": [
+        {
+            "id": "demo-source",
+            "name": "Demo Source",
+            "icon": "📖",
+            "lang": "en",
+            "version": "1.0.0",
+            "description": "Demo extension with mock webtoon data for testing. Includes 12 popular webtoon titles with chapters and pages.",
+            "filename": "example-extension.js"
+        },
+        {
+            "id": "mangadex",
+            "name": "MangaDex",
+            "icon": "🍱",
+            "lang": "all",
+            "version": "1.0.0",
+            "description": "Read manga from MangaDex.org. Supports multiple languages and high-quality images.",
+            "filename": "mangadex.js"
+        },
+        {
+            "id": "webtoon-galaxy",
+            "name": "Webtoon Galaxy",
+            "icon": "🌌",
+            "lang": "en",
+            "version": "1.0.0",
+            "description": "Access thousands of webtoons from Galaxy translators. Specializes in Korean manhwa and Chinese manhua.",
+            "filename": "webtoon-galaxy.js"
+        },
+        {
+            "id": "scan-fr",
+            "name": "Scans FR",
+            "icon": "🇫🇷",
+            "lang": "fr",
+            "version": "1.0.0",
+            "description": "French translated manga and webtoons. Largest French scanlation directory.",
+            "filename": "scan-fr.js"
+        }
+    ]
+}

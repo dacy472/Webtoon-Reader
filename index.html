@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radiant Space — Webtoon Reader</title>
+  <meta name="description"
+    content="A sleek webtoon reader with an installable extension system. Browse, read, and manage your webtoons." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/index.css" />
+</head>
+
+<body>
+  <div id="app">
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-icon">✦</span>
+        <span class="brand-text">Radiant Space</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#/library" class="nav-link" data-page="library">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+            </svg>
+            <span>Library</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/browse" class="nav-link" data-page="browse">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35" />
+            </svg>
+            <span>Browse</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/extensions" class="nav-link" data-page="extensions">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+            <span>Extensions</span>
+          </a>
+        </li>
+        <li>
+          <a href="#/settings" class="nav-link" data-page="settings">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
+            </svg>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <span class="version-tag">v1.0</span>
+      </div>
+    </nav>
+
+    <!-- Mobile Header -->
+    <header id="mobile-header" class="mobile-header">
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+      <span class="mobile-brand">✦ Radiant Space</span>
+    </header>
+
+    <!-- Sidebar overlay for mobile -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Main Content Area -->
+    <main id="content" class="content">
+      <!-- Pages rendered here by the router -->
+    </main>
+
+    <!-- Mobile Bottom Navigation (Mihon style) -->
+    <nav class="bottom-nav">
+      <a href="#/library" class="bottom-nav-item active" data-page="library">
+        <div class="bottom-nav-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+          </svg>
+        </div>
+        <span class="bottom-nav-label">Library</span>
+      </a>
+      <a href="#/browse" class="bottom-nav-item" data-page="browse">
+        <div class="bottom-nav-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z" />
+          </svg>
+        </div>
+        <span class="bottom-nav-label">Browse</span>
+      </a>
+      <a href="#/settings" class="bottom-nav-item" data-page="settings">
+        <div class="bottom-nav-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="1" />
+            <circle cx="12" cy="5" r="1" />
+            <circle cx="12" cy="19" r="1" />
+          </svg>
+        </div>
+        <span class="bottom-nav-label">More</span>
+      </a>
+    </nav>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
